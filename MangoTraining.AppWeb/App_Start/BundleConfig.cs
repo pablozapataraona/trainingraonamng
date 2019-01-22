@@ -1,6 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
+
 namespace MangoTraining.AppWeb
 {
     public class BundleConfig
@@ -28,6 +29,8 @@ namespace MangoTraining.AppWeb
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            //bundles.Add(new BabelBundle("~/bundles/main").Include("~/Scripts/react/Tutorial.jsx"));
         }
     }
 }
