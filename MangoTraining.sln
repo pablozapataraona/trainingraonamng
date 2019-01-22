@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "HelloWorld\He
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MangoTraining.Business", "MangoTraining.Business\MangoTraining.Business.csproj", "{83C6143D-2E45-4BAF-BE10-C5EBBE1D1B80}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MangoTraining.App", "MangoTraining.App\MangoTraining.App.csproj", "{1D384DD9-7EBB-4DCA-A09C-C251806A87A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MangoTraining.AppWeb", "MangoTraining.AppWeb\MangoTraining.AppWeb.csproj", "{F4DDB089-F176-48A4-AA9E-E639CD55474C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,16 @@ Global
 		{83C6143D-2E45-4BAF-BE10-C5EBBE1D1B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83C6143D-2E45-4BAF-BE10-C5EBBE1D1B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83C6143D-2E45-4BAF-BE10-C5EBBE1D1B80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D384DD9-7EBB-4DCA-A09C-C251806A87A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D384DD9-7EBB-4DCA-A09C-C251806A87A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D384DD9-7EBB-4DCA-A09C-C251806A87A3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1D384DD9-7EBB-4DCA-A09C-C251806A87A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D384DD9-7EBB-4DCA-A09C-C251806A87A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D384DD9-7EBB-4DCA-A09C-C251806A87A3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F4DDB089-F176-48A4-AA9E-E639CD55474C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4DDB089-F176-48A4-AA9E-E639CD55474C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4DDB089-F176-48A4-AA9E-E639CD55474C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4DDB089-F176-48A4-AA9E-E639CD55474C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
