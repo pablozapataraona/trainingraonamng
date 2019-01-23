@@ -9,14 +9,16 @@ namespace MangoTraining.AppWeb.Controllers
 {
     public class TicketsController : ApiController
     {
+        [Route("api/Stores/{storeId}/tickets")]
         // GET: api/Tickets
-        public IEnumerable<string> Get()
+        public IEnumerable<string> Get(int storeId)
         {
             return new string[] { "value1", "value2" };
         }
 
+        [Route("api/Stores/{storeId}/tickets/{id}")]
         // GET: api/Tickets/5
-        public string Get(int id)
+        public string Get(int storeId, int id)
         {
             return "value";
         }

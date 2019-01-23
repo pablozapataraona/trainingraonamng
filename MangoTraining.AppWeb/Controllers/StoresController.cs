@@ -60,5 +60,26 @@ namespace MangoTraining.AppWeb.Controllers
         public void Delete(int id)
         {
         }
+
+        //[Route("api/Stores/{id}/tickets")]
+        //public HttpResponseMessage GetTickets(int id)
+        //{
+        //    try
+        //    {
+        //        var tickets = new string[] { "value1", "value2" };
+        //        return Request.CreateResponse(HttpStatusCode.OK, tickets);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        var msg = new HttpResponseMessage()
+        //        {
+        //            StatusCode = HttpStatusCode.InternalServerError,
+        //            Content = new StringContent(ex.Message)
+        //        };
+
+        //        return msg;
+        //    }
+
+        //}
     }
 }
