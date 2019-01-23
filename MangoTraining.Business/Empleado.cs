@@ -55,12 +55,12 @@ namespace MangoTraining.Business
 
             //Devolvemos todos los empleados que tienen cierta tienda asignada
 
-            return ddbbEmployeeCol.Where(empleado => empleado.TiendaAsociada.ID == Id).ToList();
+            return ddbbEmployeeCol.Where(empleado => empleado.TiendaAsociada.key == Id).ToList();
         }
 
         public List<Employee> GetByStoreId(int Id)
         {
-            return this.Where(empleado => empleado.TiendaAsociada.ID == Id).ToList();
+            return this.Where(empleado => empleado.TiendaAsociada.key == Id).ToList();
         }
     }
 }

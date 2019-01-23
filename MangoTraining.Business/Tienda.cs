@@ -14,7 +14,7 @@ namespace MangoTraining.Business
         public string Responsable;
         public TipoTienda Tipo;
         public string TipoDeContenido;
-        private int _ID;
+        private int _Key;
         private ListItem AssociatedListItem;
         public Store()
         {
@@ -22,7 +22,7 @@ namespace MangoTraining.Business
 
         public Store(int ID)
         {
-            this._ID = ID;
+            this._Key = ID;
         }
 
         public Store(ListItem item)
@@ -32,7 +32,7 @@ namespace MangoTraining.Business
 
         public enum TipoTienda { Indefinido, Propias, Franquicias, Deposito };
 
-        public int ID => _ID;
+        public int key => _Key;
         public void DeleteFromSharePoint()
         {
             if (this.AssociatedListItem == null) throw new Exception("El elemento no está asociado");
@@ -64,18 +64,18 @@ namespace MangoTraining.Business
 
             UpdateListItemProperties(ctx, rootSite, list, item);
 
-            this._ID = item.Id;
+            this._Key = item.Id;
         }
 
         public void SetStoreID(int id)
         {
             //Lógica de validación en BBDD para ver si existe o no....
-            this._ID = id;
+            this._Key = id;
         }
 
         public void Update(ClientContext ctx)
         {
-            if (this.ID == 0) throw new Exception("El elemento no ha sido inicializado");
+            if (this.key == 0) throw new Exception("El elemento no ha sido inicializado");
 
             var rootSite = ctx.Site.RootWeb;
             var list = rootSite.Lists.GetByTitle(Constants.Lists.Tiendas);
@@ -90,7 +90,7 @@ namespace MangoTraining.Business
         private void ParseListItemToStore(ListItem item)
         {
             this.AssociatedListItem = item;
-            this._ID = item.Id;
+            this._Key = item.Id;
             this.Description = item[Constants.Columns.Titulo] != null ? item[Constants.Columns.Titulo].ToString() : string.Empty;
             this.OpenDate = item[Constants.Columns.FechaApertura] != null ? (DateTime)item[Constants.Columns.FechaApertura] : DateTime.MinValue;
             this.Responsable = item[Constants.Columns.Responsable] != null ? ((FieldUserValue)item[Constants.Columns.Responsable]).Email : string.Empty;

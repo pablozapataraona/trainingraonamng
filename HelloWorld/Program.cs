@@ -187,7 +187,7 @@ namespace HelloWorld
 
             foreach (var store in tiendaCol1.GetByDate(DateTime.Today))
             {
-                Console.WriteLine("ID: {0}, Fecha: {1}, Descripción: {2}", store.ID, store.OpenDate.ToShortDateString(), store.Description);
+                Console.WriteLine("ID: {0}, Fecha: {1}, Descripción: {2}", store.key, store.OpenDate.ToShortDateString(), store.Description);
             }
         }
 
@@ -318,7 +318,7 @@ namespace HelloWorld
         private static void PrintTienda(Store tienda)
         {
             Console.WriteLine("Tienda -> ID:{0}, descripción:{1}, fecha:{2}, responsable:{3}, provincia:{4}, tipo:{5}, contenido:{6}",
-                tienda.ID, tienda.Description, tienda.OpenDate.ToShortDateString(), tienda.Responsable, tienda.Provincia, tienda.Tipo, tienda.TipoDeContenido);
+                tienda.key, tienda.Description, tienda.OpenDate.ToShortDateString(), tienda.Responsable, tienda.Provincia, tienda.Tipo, tienda.TipoDeContenido);
         }
 
         private static void SaveTienda()
@@ -335,7 +335,7 @@ namespace HelloWorld
                 };
 
                 tienda.SaveInSharePoint(ctx);
-                Console.WriteLine("Tienda creada con ID: {0}", tienda.ID);
+                Console.WriteLine("Tienda creada con ID: {0}", tienda.key);
             }
         }
 
