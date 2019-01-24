@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <!--Created:cb85b80c-f585-40ff-8bfc-12ff4d0e34a9-->
 <App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest"
-     Name="MangoTrainingApp"
-     ProductID="{48b3a39c-ff1d-4e74-b237-eae177007f54}"
+     Name="MangoTraining"
+     ProductID="{629052ff-577b-462f-b24b-5789f958d8a3}"
      Version="1.0.0.0"
      SharePointMinVersion="16.0.0.0"
 >
   <Properties>
-    <Title>MangoTraining.App</Title>
-    <StartPage>https://mangotrainingappweb.azurewebsites.net?{StandardTokens}</StartPage>
+    <Title>MangoTraining App</Title>
+    <StartPage>~remoteAppUrl/?{StandardTokens}</StartPage>
   </Properties>
 
   <AppPrincipal>
-    <RemoteWebApplication ClientId="b3428fb1-3c55-4f9a-a0b6-8941ac48e112" />
+    <RemoteWebApplication ClientId="*" />
   </AppPrincipal>
-  <AppPermissionRequests AllowAppOnlyPolicy="true" >
+  <AppPermissionRequests>
     <AppPermissionRequest Scope="http://sharepoint/taxonomy" Right="Read" />
     <AppPermissionRequest Scope="http://sharepoint/content/sitecollection" Right="FullControl" />
   </AppPermissionRequests>
