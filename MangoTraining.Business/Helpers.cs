@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MangoTraining.Business
 {
@@ -35,7 +31,7 @@ namespace MangoTraining.Business
         }
 
         /// <summary>
-        /// Permite parsear el string del valor del elemento contra el enumerable. En caso de no existir devuelve el valor del enumerable 
+        /// Permite parsear el string del valor del elemento contra el enumerable. En caso de no existir devuelve el valor del enumerable
         /// indefinido
         /// </summary>
         /// <param name="value"></param>

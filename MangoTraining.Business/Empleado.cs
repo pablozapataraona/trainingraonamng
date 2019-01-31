@@ -24,6 +24,7 @@ namespace MangoTraining.Business
                 }
             }
         }
+
         public static bool IsNIFValid(string nif)
         {
             var result = Idgen.Net.IdGen.ValidateNif(nif);

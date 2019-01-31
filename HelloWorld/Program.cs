@@ -63,9 +63,11 @@ namespace HelloWorld
                         case (ConsoleKey.U):
                             UpdateTienda();
                             break;
+
                         case (ConsoleKey.D):
                             DeleteTienda();
                             break;
+
                         case (ConsoleKey.X):
                             exit = true;
                             break;

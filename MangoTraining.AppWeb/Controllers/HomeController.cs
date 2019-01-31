@@ -14,26 +14,6 @@ namespace MangoTraining.AppWeb.Controllers
         [SharePointContextFilter]
         public ActionResult Index()
         {
-            try
-            {
-                //throw new Exception("Este es mi error!!!");
-
-                var spContext = SharePointContextProvider.Current.GetSharePointContext(HttpContext);
-                using (var clientContext = spContext.CreateUserClientContextForSPHost())
-                {
-                    if (clientContext != null)
-                    {
-                        var tiendas = new StoreCollection();
-                        tiendas.GetFromSharePoint(clientContext);
-                        ViewBag.Stores = tiendas.ToList();
-                    }
-                }
-            }
-            catch(Exception ex)
-            {
-                ViewBag.Error = ex.Message;
-            }
-
             return View();
         }
 
